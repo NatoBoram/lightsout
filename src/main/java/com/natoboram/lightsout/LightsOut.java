@@ -4,8 +4,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.fabricmc.api.DedicatedServerModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 
+@Environment(EnvType.SERVER)
 public class LightsOut implements DedicatedServerModInitializer {
 	private static final String MOD_ID = "lightsout";
 
@@ -24,6 +27,7 @@ public class LightsOut implements DedicatedServerModInitializer {
 	@Override
 	public void onInitializeServer() {
 		ServerPlayConnectionEvents.DISCONNECT.register(new DisconnectHandler(LightsOut.LOGGER));
+		ServerPlayConnectionEvents.JOIN.register(new JoinHandler(LightsOut.LOGGER));
 		LOGGER.info("Loaded Lights Out!");
 	}
 }
