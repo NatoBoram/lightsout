@@ -13,6 +13,11 @@ import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 
+/**
+ * Handles player disconnect events.
+ * <p>
+ * When the last player disconnects, the server is stopped.
+ */
 @Environment(EnvType.SERVER)
 public class DisconnectHandler implements ServerPlayConnectionEvents.Disconnect {
 	private final Logger LOGGER;

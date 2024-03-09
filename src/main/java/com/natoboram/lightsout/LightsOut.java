@@ -8,6 +8,12 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 
+/**
+ * The main class of the mod.
+ * <p>
+ * This class is responsible for initializing the mod and registering event
+ * handlers.
+ */
 @Environment(EnvType.SERVER)
 public class LightsOut implements DedicatedServerModInitializer {
 	private static final String MOD_ID = "lightsout";

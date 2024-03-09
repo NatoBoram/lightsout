@@ -15,6 +15,14 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.world.GameRules;
 
+/**
+ * Handles player join events.
+ * <p>
+ * When the first player joins, the time is set to 0 as if the
+ * {@link net.minecraft.server.command.TimeCommand /time command} was used
+ * except if the {@link net.minecraft.world.GameRules#DO_DAYLIGHT_CYCLE
+ * doDaylightCycle} game rule is false.
+ */
 @Environment(EnvType.SERVER)
 public class JoinHandler implements ServerPlayConnectionEvents.Join {
 	private final Logger LOGGER;
