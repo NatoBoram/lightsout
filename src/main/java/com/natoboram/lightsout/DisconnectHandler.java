@@ -27,11 +27,13 @@ public class DisconnectHandler implements ServerPlayConnectionEvents.Disconnect 
 		final List<ServerPlayerEntity> playerList = playerManager.getPlayerList();
 		final int size = playerList.size();
 
-		if (size == 1) {
-			LOGGER.info("Last player disconnected, stopping server");
-			server.stop(false);
-		} else {
+		// The player count is 1 when the last player disconnects
+		if (size > 1) {
 			LOGGER.debug("Player disconnected, {} players remaining", size - 1);
+			return;
 		}
+
+		LOGGER.info("Last player disconnected, stopping server");
+		server.stop(false);
 	}
 }
