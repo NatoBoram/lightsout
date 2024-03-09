@@ -10,7 +10,7 @@
     "sources": "https://github.com/NatoBoram/lightsout",
     "issues": "https://github.com/NatoBoram/lightsout/issues"
   },
-  "license": "GPL-3.0-or-later",
+  "license": "AGPL-3.0-or-later",
   "icon": "assets/lightsout/icon.png",
   "environment": "server",
   "entrypoints": {
