@@ -1,25 +1,25 @@
 {
-  "schemaVersion": 1,
-  "id": "lightsout",
-  "version": "${version}",
-  "name": "Lights Out",
-  "description": "Stops the server when the last player disconnects.",
-  "authors": ["Nato Boram"],
-  "contact": {
-    "homepage": "https://github.com/NatoBoram/lightsout",
-    "sources": "https://github.com/NatoBoram/lightsout",
-    "issues": "https://github.com/NatoBoram/lightsout/issues"
-  },
-  "license": "AGPL-3.0-or-later",
-  "icon": "assets/lightsout/icon.png",
-  "environment": "server",
-  "entrypoints": {
-    "server": ["com.natoboram.lightsout.LightsOut"]
-  },
-  "depends": {
-    "fabricloader": ">=0.15.7",
-    "minecraft": ">=1.20.1",
-    "java": ">=17",
-    "fabric-api": ">=0.92.0+1.20.1"
-  }
+	"schemaVersion": 1,
+	"id": "lightsout",
+	"version": "${version}",
+	"name": "Lights Out",
+	"description": "Stops the server when the last player disconnects.",
+	"authors": ["Nato Boram"],
+	"contact": {
+		"homepage": "https://github.com/NatoBoram/lightsout",
+		"sources": "https://github.com/NatoBoram/lightsout",
+		"issues": "https://github.com/NatoBoram/lightsout/issues"
+	},
+	"license": "AGPL-3.0-or-later",
+	"icon": "assets/lightsout/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"server": ["com.natoboram.lightsout.LightsOut"]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": ">=1.20.1",
+		"java": ">=17",
+		"fabric-api": ">=0.92.0+1.20.1"
+	}
 }

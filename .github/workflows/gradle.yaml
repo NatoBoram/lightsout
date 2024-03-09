@@ -13,6 +13,7 @@ jobs:
 
     permissions:
       contents: write
+      packages: write
 
     steps:
       - uses: actions/checkout@v4
@@ -46,4 +47,10 @@ jobs:
       - run: gh release create ${{ github.ref_name }} --generate-notes --title ${{ github.ref_name }} --verify-tag build/libs/*
         if: github.ref_type == 'tag' && github.actor != 'nektos/act'
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: ./gradlew publish
+        if: github.ref_type == 'tag' && github.actor != 'nektos/act'
+        env:
+          GITHUB_USERNAME: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
