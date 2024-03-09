@@ -1,41 +1,25 @@
 {
-	"schemaVersion": 1,
-	"id": "modid",
-	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
-		]
-	},
-	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.15.0",
-		"minecraft": "~1.20.4",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "lightsout",
+  "version": "${version}",
+  "name": "Lights Out",
+  "description": "Stops the server when the last player disconnects.",
+  "authors": ["Nato Boram"],
+  "contact": {
+    "homepage": "https://github.com/NatoBoram/lightsout",
+    "sources": "https://github.com/NatoBoram/lightsout",
+    "issues": "https://github.com/NatoBoram/lightsout/issues"
+  },
+  "license": "GPL-3.0-or-later",
+  "icon": "assets/lightsout/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "server": ["com.natoboram.lightsout.LightsOut"]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.7",
+    "minecraft": ">=1.20.1",
+    "java": ">=17",
+    "fabric-api": ">=0.92.0+1.20.1"
+  }
 }
