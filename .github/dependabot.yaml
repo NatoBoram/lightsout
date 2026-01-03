@@ -1,4 +1,5 @@
 version: 2
+
 updates:
   - package-ecosystem: gradle
     directory: /
@@ -15,3 +16,7 @@ updates:
       timezone: America/Toronto
     commit-message:
       prefix: "⬆️ "
+    groups:
+      actions:
+        patterns:
+          - actions/*
