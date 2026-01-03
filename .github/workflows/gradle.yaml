@@ -37,7 +37,7 @@ jobs:
           	ssh-keygen -Y verify -f ./.github/authorized_keys -I '41898282+github-actions[bot]@users.noreply.github.com' -n file -s "$filename.sig" < "$filename"
           done
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: github.ref_name == 'main' && github.actor != 'nektos/act'
         with:
           name: lightsout
